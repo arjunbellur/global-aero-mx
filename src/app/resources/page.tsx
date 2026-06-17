@@ -31,21 +31,12 @@ export default function ResourcesPage() {
       {/* Page hero */}
       <section className="page-hero">
         <div className="container">
-          <p className="overline-label" style={{ marginBottom: "10px" }}>Resources</p>
-          <h1
-            style={{
-              fontWeight: 900,
-              fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-              textTransform: "uppercase",
-              letterSpacing: "-0.01em",
-              color: "var(--text-primary)",
-              margin: "0 0 12px",
-            }}
-          >
+          <p className="overline-label" style={{ marginBottom: 0 }}>Resources</p>
+          <h1 style={{ fontWeight: 900, fontSize: "clamp(34px,4.6vw,52px)", lineHeight: 1.04, letterSpacing: "-1.2px", margin: "14px 0 0", color: "#14163d" }}>
             Maintenance Insights
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--text-muted)", margin: 0, maxWidth: "520px" }}>
-            Practical guidance for Tampa-area aircraft owners.
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", lineHeight: 1.55, maxWidth: 600, margin: "18px 0 0" }}>
+            Practical guidance for Tampa-area aircraft owners. New articles coming soon.
           </p>
         </div>
       </section>

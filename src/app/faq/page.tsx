@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 const faqs = [
   {
@@ -58,21 +57,12 @@ export default function FAQPage() {
       {/* Page hero */}
       <section className="page-hero">
         <div className="container">
-          <p className="overline-label" style={{ marginBottom: "10px" }}>FAQ</p>
-          <h1
-            style={{
-              fontWeight: 900,
-              fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-              textTransform: "uppercase",
-              letterSpacing: "-0.01em",
-              color: "var(--text-primary)",
-              margin: "0 0 12px",
-            }}
-          >
+          <p className="overline-label" style={{ marginBottom: 0 }}>FAQ</p>
+          <h1 style={{ fontWeight: 900, fontSize: "clamp(34px,4.6vw,52px)", lineHeight: 1.04, letterSpacing: "-1.2px", margin: "14px 0 0", color: "#14163d" }}>
             Common Questions
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--text-muted)", margin: 0, maxWidth: "520px" }}>
-            Everything you need to know about our services, certifications, and how we work.
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", lineHeight: 1.55, maxWidth: 600, margin: "18px 0 0" }}>
+            Everything owners ask before bringing an aircraft to KVDF.
           </p>
         </div>
       </section>
@@ -137,31 +127,14 @@ export default function FAQPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section
-        style={{
-          background: "var(--blue-primary)",
-          color: "#fff",
-          padding: "56px 24px",
-          textAlign: "center",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "560px" }}>
-          <h2 style={{ fontWeight: 700, fontSize: "1.5rem", margin: "0 0 12px" }}>
+      <section className="cta-band" style={{ textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: 900 }}>
+          <div style={{ fontWeight: 900, fontSize: "clamp(24px,3vw,32px)", letterSpacing: "-0.5px" }}>
             Still have questions?
-          </h2>
-          <p style={{ opacity: 0.85, fontSize: "1rem", margin: "0 0 24px", lineHeight: 1.6 }}>
-            Call{" "}
-            <a href="tel:+18137534020" style={{ color: "#fff", fontWeight: 700 }}>
-              (813) 753-4020
-            </a>{" "}
-            or email{" "}
-            <a href="mailto:GAMX@globalaeromx.com" style={{ color: "#fff", fontWeight: 700 }}>
-              GAMX@globalaeromx.com
-            </a>
-          </p>
-          <Link href="/schedule" className="btn-white">
-            Schedule Service →
-          </Link>
+          </div>
+          <div style={{ fontSize: "1.0625rem", marginTop: 10, opacity: 0.92 }}>
+            Call (813) 753-4020 or email GAMX@globalaeromx.com
+          </div>
         </div>
       </section>
     </>

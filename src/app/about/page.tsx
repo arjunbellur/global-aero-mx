@@ -3,21 +3,21 @@ import Image from "next/image";
 const pillars = [
   {
     title: "Expert & Experienced",
-    desc: "Our A&P/IA-certificated mechanics bring decades of hands-on experience across single and multi-engine piston platforms.",
+    desc: "A&P/IA technicians who know piston aircraft inside and out — from annuals to complex avionics.",
     photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
     photoAlt: "Aircraft at airport",
   },
   {
     title: "Support with Technology",
-    desc: "We use current diagnostic tools and avionics support systems to deliver accurate, efficient troubleshooting and repairs.",
+    desc: "Modern avionics, ADS-B, and diagnostic tooling — done right with full documentation.",
     photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
     photoAlt: "Aircraft cockpit avionics",
   },
   {
     title: "Transparent Service",
-    desc: "Every work order is documented in full. You see exactly what was done, what was found, and what it cost — no surprises.",
-    photo: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft in flight",
+    desc: "Detailed logbooks and no-surprise invoices on every job. You see exactly what was done and why.",
+    photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Aircraft cockpit instruments",
   },
 ];
 
@@ -34,42 +34,35 @@ const whyChoose = [
   "No Surprise Invoices",
 ];
 
+const credentials = [
+  "FAA Certificated Repair Station",
+  "KVDF — Tampa Executive Airport",
+  "Hangar A/B · 6530 Tampa Executive Airport Rd, Tampa FL 33610",
+  "Single & Multi-Engine Piston",
+  "A&P / IA Certified Mechanics",
+  "Return-to-Service Documentation",
+];
+
 export default function AboutPage() {
   return (
     <>
       {/* Page hero */}
       <section className="page-hero">
         <div className="container">
-          <p className="overline-label" style={{ marginBottom: "10px" }}>About</p>
-          <h1
-            style={{
-              fontWeight: 900,
-              fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-              textTransform: "uppercase",
-              letterSpacing: "-0.01em",
-              color: "var(--text-primary)",
-              margin: "0 0 12px",
-            }}
-          >
+          <p className="overline-label" style={{ marginBottom: 0 }}>About</p>
+          <h1 style={{ fontWeight: 900, fontSize: "clamp(34px,4.6vw,52px)", lineHeight: 1.04, letterSpacing: "-1.2px", margin: "14px 0 0", color: "#14163d" }}>
             About Global Aero Maintenance
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--text-muted)", margin: 0, maxWidth: "560px" }}>
+          <p style={{ fontSize: "1.125rem", color: "var(--text-muted)", lineHeight: 1.55, maxWidth: 600, margin: "18px 0 0" }}>
             FAA-certificated. Tampa-based. Built for general aviation.
           </p>
         </div>
       </section>
 
       {/* About copy */}
-      <section className="section" style={{ background: "#fff" }} data-animate>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <p
-            style={{
-              fontSize: "1.125rem",
-              lineHeight: 1.75,
-              color: "var(--text-primary)",
-              margin: 0,
-            }}
-          >
+      <section style={{ background: "#fff" }} data-animate>
+        <div className="container" style={{ maxWidth: 820, padding: "60px clamp(20px,4vw,28px) 10px" }}>
+          <p style={{ fontSize: "1.3125rem", lineHeight: 1.6, color: "#33384f", fontWeight: 500, margin: 0 }}>
             Keeping your aircraft airworthy, safe, and flying. Our FAA-certificated technicians deliver
             quality maintenance, inspections, and avionics support for the general aviation community at
             one of Tampa Bay&apos;s most active reliever airports. Based at Tampa Executive Airport (KVDF),
@@ -80,12 +73,12 @@ export default function AboutPage() {
       </section>
 
       {/* Three pillars */}
-      <section className="section-alt" data-animate>
+      <section className="section" style={{ background: "#fff" }} data-animate>
         <div className="container">
           <div className="pillars-grid" data-stagger>
             {pillars.map((p, idx) => (
-              <div key={p.title} className="card" style={{ padding: "0", overflow: "hidden" }}>
-                <div className="img-wrap" style={{ height: "200px" }}>
+              <div key={p.title} className="card" style={{ padding: 0, overflow: "hidden" }}>
+                <div className="img-wrap" style={{ height: 170, borderRadius: 0 }}>
                   <Image
                     src={p.photo}
                     alt={p.photoAlt}
@@ -95,11 +88,11 @@ export default function AboutPage() {
                     style={{ objectFit: "cover" }}
                   />
                 </div>
-                <div style={{ padding: "24px 24px 28px" }}>
-                  <h3 style={{ fontWeight: 700, fontSize: "1.125rem", color: "var(--text-primary)", margin: "0 0 10px" }}>
+                <div style={{ padding: "20px" }}>
+                  <h3 style={{ fontWeight: 800, fontSize: "1.1875rem", letterSpacing: "-0.3px", color: "var(--text-primary)", margin: "0 0 6px" }}>
                     {p.title}
                   </h3>
-                  <p style={{ fontSize: "0.9375rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.65 }}>
+                  <p style={{ fontSize: "0.90625rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>
                     {p.desc}
                   </p>
                 </div>
@@ -110,150 +103,68 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section" style={{ background: "#fff" }} data-animate>
+      <section className="section-alt" data-animate>
         <div className="container">
-          <p className="overline-label" style={{ marginBottom: "8px" }}>Why Choose Us</p>
-          <h2
-            style={{
-              fontWeight: 700,
-              fontSize: "1.875rem",
-              color: "var(--text-primary)",
-              margin: "0 0 36px",
-            }}
-          >
-            10 Reasons Owners Trust Us
+          <p className="overline-label" style={{ marginBottom: 8 }}>Why Choose Us</p>
+          <h2 style={{ fontWeight: 800, fontSize: "clamp(26px,3.2vw,34px)", letterSpacing: "-0.6px", margin: "8px 0 28px", color: "var(--text-primary)" }}>
+            The standard we hold on every aircraft.
           </h2>
           <div className="why-grid" data-stagger>
             {whyChoose.map((w) => (
-              <div
-                key={w}
-                className="card"
-                style={{
-                  padding: "18px 14px",
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: "10px",
-                }}
-              >
-                <div
-                  style={{
-                    width: "32px",
-                    height: "32px",
-                    borderRadius: "50%",
-                    background: "var(--blue-light)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-                    <path d="M2 6.5l3 3 6-6" stroke="var(--blue-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <span style={{ fontWeight: 700, fontSize: "0.8125rem", color: "var(--text-primary)", lineHeight: 1.3 }}>
-                  {w}
-                </span>
+              <div key={w} style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", border: "1px solid var(--gray-200)", borderRadius: 11, padding: "15px 16px" }}>
+                <span className="check-dot">✓</span>
+                <span style={{ fontWeight: 600, fontSize: "0.90625rem" }}>{w}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Station credentials */}
-      <section className="section-alt" data-animate>
-        <div className="container">
-          <h2
-            style={{
-              fontWeight: 700,
-              fontSize: "1.375rem",
-              color: "var(--text-primary)",
-              margin: "0 0 24px",
-            }}
-          >
-            Station Credentials
-          </h2>
-          <div className="creds-grid">
-            {[
-              "FAA Certificated Repair Station",
-              "KVDF — Tampa Executive Airport",
-              "Hangar A/B — Tampa, FL 33610",
-              "Single & Multi-Engine Piston",
-              "A&P / IA Certified Mechanics",
-              "Return-to-Service Documentation",
-            ].map((c) => (
-              <div
-                key={c}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  fontSize: "0.9375rem",
-                  color: "var(--text-primary)",
-                }}
-              >
-                <div
-                  style={{
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    background: "var(--blue-primary)",
-                    flexShrink: 0,
-                  }}
-                />
-                {c}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GPA connection */}
+      {/* Credentials + GPA */}
       <section className="section" style={{ background: "#fff" }} data-animate>
         <div className="container">
-          <div className="gpa-grid">
+          <div className="creds-gpa-grid">
+            {/* Credentials */}
             <div>
-              <p className="overline-label" style={{ marginBottom: "12px" }}>Part of the GPA Family</p>
-              <h2
-                style={{
-                  fontWeight: 700,
-                  fontSize: "1.5rem",
-                  color: "var(--text-primary)",
-                  margin: "0 0 16px",
-                }}
-              >
-                Part of the Global Pilot Academy Family
-              </h2>
-              <p
-                style={{
-                  fontSize: "1rem",
-                  color: "var(--text-muted)",
-                  lineHeight: 1.7,
-                  marginBottom: "24px",
-                }}
-              >
-                Global Aero Maintenance is the in-house maintenance operation supporting GPA&apos;s
-                17-aircraft training fleet at KVDF. The same quality and accountability we bring to
-                flight school aircraft is what we bring to yours.
+              <p className="overline-label" style={{ marginBottom: 18 }}>Station Credentials</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {credentials.map((c) => (
+                  <div key={c} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <span className="check-dot-sm">✓</span>
+                    <span style={{ fontSize: "1rem", color: "#33384f", lineHeight: 1.4 }}>{c}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* GPA card */}
+            <div style={{ background: "var(--gray-50)", border: "1px solid var(--gray-200)", borderRadius: 16, padding: 28 }}>
+              <div className="img-wrap" style={{ height: 160, marginBottom: 20 }}>
+                <Image
+                  src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=900&q=80"
+                  alt="Training fleet aircraft"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <p className="overline-label" style={{ marginBottom: 0 }}>Part of the GPA Family</p>
+              <h3 style={{ fontWeight: 800, fontSize: "1.375rem", letterSpacing: "-0.3px", margin: "10px 0 12px", color: "var(--text-primary)" }}>
+                Global Pilot Academy
+              </h3>
+              <p style={{ fontSize: "0.96875rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 16px" }}>
+                GAM is the in-house maintenance operation supporting GPA&apos;s 17-aircraft training fleet
+                at KVDF. The same quality and accountability we bring to flight school aircraft is what
+                we bring to yours.
               </p>
               <a
                 href="https://gpapilot.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                style={{ color: "var(--blue-primary)", fontWeight: 700, fontSize: "0.9375rem", textDecoration: "none" }}
               >
                 Visit gpapilot.com →
               </a>
-            </div>
-            <div className="img-wrap" style={{ height: "280px" }}>
-              <Image
-                src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=900&q=80"
-                alt="Training fleet aircraft on ramp"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
             </div>
           </div>
         </div>
@@ -261,29 +172,9 @@ export default function AboutPage() {
 
       {/* Quote band */}
       <section className="quote-band" data-animate>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <p
-            style={{
-              fontStyle: "italic",
-              fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
-              lineHeight: 1.45,
-              margin: "0 0 20px",
-              fontWeight: 300,
-            }}
-          >
+        <div className="container" style={{ maxWidth: 900 }}>
+          <p style={{ fontStyle: "italic", fontWeight: 500, fontSize: "clamp(22px,2.6vw,30px)", lineHeight: 1.34, margin: 0 }}>
             &ldquo;Airworthiness is not a destination — it&apos;s a standard we maintain every day.&rdquo;
-          </p>
-          <p
-            style={{
-              fontSize: "0.75rem",
-              fontWeight: 700,
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              opacity: 0.7,
-              margin: 0,
-            }}
-          >
-            — Global Aero Maintenance Team
           </p>
         </div>
       </section>
