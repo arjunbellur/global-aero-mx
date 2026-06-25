@@ -52,18 +52,6 @@ const serviceSections = [
     ],
   },
   {
-    title: "Avionics & Electrical Systems",
-    short: "Avionics",
-    bullets: [
-      "ADS-B Out installation & certification",
-      "COM/NAV radio troubleshooting",
-      "Transponder testing (IFR cert.)",
-      "GPS navigator installation",
-      "ELT inspection & replacement",
-      "Electrical wiring & harness repair",
-    ],
-  },
-  {
     title: "Additional Services",
     short: "Additional",
     bullets: [

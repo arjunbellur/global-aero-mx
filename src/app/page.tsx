@@ -28,10 +28,6 @@ const services = [
     desc: "Top overhauls, cylinder work, magnetos, carburetor and fuel injection service.",
   },
   {
-    title: "Avionics & Electrical",
-    desc: "ADS-B Out, COM/NAV, transponder cert, GPS installs, and wiring repair.",
-  },
-  {
     title: "Additional Services",
     desc: "Prop balance, pitot-static cert, oil analysis, and weight & balance.",
   },
@@ -86,7 +82,7 @@ export default function HomePage() {
                 }}
               >
                 Expert piston aircraft maintenance — single &amp; multi-engine — from FAA-certificated
-                technicians at Tampa Executive Airport. Quality inspections, avionics, and repair for
+                technicians at Tampa Executive Airport. Quality maintenance, inspections, and repair for
                 the general aviation community.
               </p>
               <div data-hero-anim style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 30 }}>
@@ -224,7 +220,7 @@ export default function HomePage() {
             <div>
               <p className="overline-label" style={{ marginBottom: 12 }}>Aircraft We Service</p>
               <h2 style={{ fontWeight: 800, fontSize: "clamp(26px,3.2vw,34px)", letterSpacing: "-0.6px", margin: "8px 0 14px", color: "var(--text-primary)" }}>
-                Cessna, Piper, Beechcraft, Cirrus, Mooney, Diamond, Grumman &amp; more.
+                Cessna, Piper, Beechcraft, Mooney, Grumman &amp; more.
               </h2>
               <p style={{ fontSize: "1.0625rem", color: "var(--text-muted)", marginBottom: 22, lineHeight: 1.6 }}>
                 Single and multi-engine piston aircraft. If it has a prop and a logbook, we can work on it.

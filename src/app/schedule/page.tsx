@@ -7,7 +7,7 @@ const serviceOptions = [
   "Airframe Maintenance",
   "Multi-Engine Service",
   "Engine & Powerplant",
-  "Avionics & Electrical",
+
   "Additional Services",
   "AOG / Unscheduled",
   "Pre-Buy Inspection",
@@ -68,7 +68,7 @@ export default function SchedulePage() {
             We&apos;re Ready to Work
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--text-muted)", margin: 0, maxWidth: "600px" }}>
-            Annual due, chasing a squawk, or planning an avionics upgrade — get in touch. AOG
+            Annual due, chasing a squawk, or planning an engine overhaul — get in touch. AOG
             situations receive same-day callbacks.
           </p>
         </div>

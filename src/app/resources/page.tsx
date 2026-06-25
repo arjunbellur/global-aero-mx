@@ -10,16 +10,16 @@ const articles = [
     photoAlt: "Aircraft at airport",
   },
   {
-    title: "ADS-B Out: What Tampa Pilots Need to Know",
+    title: "Engine Health: Reading Your Oil Analysis Report",
     teaser:
-      "Requirements, install options, certified avionics shops, and what the certification process looks like around the KVDF area.",
-    photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft cockpit avionics display",
+      "What the numbers mean, which metals to watch, and when a trend should prompt a call to your A&P — explained for piston aircraft owners.",
+    photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Aircraft engine inspection",
   },
   {
     title: "Pre-Buy Inspection Checklist for Piston Aircraft Buyers",
     teaser:
-      "The key airframe, engine, and avionics items we evaluate before you commit to a purchase — and why an independent inspection matters.",
+      "The key airframe, engine, and systems items we evaluate before you commit to a purchase — and why an independent inspection matters.",
     photo: "https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=800&q=80",
     photoAlt: "Piston aircraft for pre-buy inspection",
   },

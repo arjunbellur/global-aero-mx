@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "What aircraft do you work on?",
-    a: "Single and multi-engine piston aircraft including Cessna, Piper, Beechcraft, Mooney, Grumman, and Diamond. See our full list at /aircraft.",
+    a: "Single and multi-engine piston aircraft including Cessna, Piper, Beechcraft, Mooney, and Grumman. See our full list at /aircraft.",
   },
   {
     q: "Do you work on multi-engine aircraft?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Do you do pre-buy inspections?",
-    a: "Yes. We work for the buyer — not the seller — and provide a written findings report covering airframe, engine, and avionics condition.",
+    a: "Yes. We work for the buyer — not the seller — and provide a written findings report covering airframe, engine, and systems condition.",
   },
   {
     q: "What are your hours?",

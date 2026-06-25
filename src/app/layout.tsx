@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Global Aero Maintenance — FAA Certificated Aircraft Maintenance | Tampa KVDF",
   description:
-    "FAA-certificated aircraft maintenance for single and multi-engine piston aircraft at Tampa Executive Airport (KVDF). Annual inspections, airframe repair, avionics, and more.",
+    "FAA-certificated aircraft maintenance for single and multi-engine piston aircraft at Tampa Executive Airport (KVDF). Annual inspections, airframe repair, engine overhaul, and more.",
 };
 
 export default function RootLayout({

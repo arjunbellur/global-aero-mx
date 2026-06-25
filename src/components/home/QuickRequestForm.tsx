@@ -62,7 +62,7 @@ export default function QuickRequestForm() {
           <option>Airframe Maintenance</option>
           <option>Multi-Engine Service</option>
           <option>Engine &amp; Powerplant</option>
-          <option>Avionics &amp; Electrical</option>
+
           <option>AOG / Unscheduled</option>
         </select>
         <button type="submit" className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>

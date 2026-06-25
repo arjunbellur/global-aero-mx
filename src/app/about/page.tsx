@@ -3,15 +3,15 @@ import Image from "next/image";
 const pillars = [
   {
     title: "Expert & Experienced",
-    desc: "A&P/IA technicians who know piston aircraft inside and out — from annuals to complex avionics.",
+    desc: "A&P/IA technicians who know piston aircraft inside and out — from annuals to complex engine work.",
     photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
     photoAlt: "Aircraft at airport",
   },
   {
     title: "Support with Technology",
-    desc: "Modern avionics, ADS-B, and diagnostic tooling — done right with full documentation.",
+    desc: "Modern diagnostic tools and testing equipment — accurate, efficient troubleshooting with full documentation.",
     photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft cockpit avionics",
+    photoAlt: "Aircraft cockpit instruments",
   },
   {
     title: "Transparent Service",
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <div className="container" style={{ maxWidth: 820, padding: "60px clamp(20px,4vw,28px) 10px" }}>
           <p style={{ fontSize: "1.3125rem", lineHeight: 1.6, color: "#33384f", fontWeight: 500, margin: 0 }}>
             Keeping your aircraft airworthy, safe, and flying. Our FAA-certificated technicians deliver
-            quality maintenance, inspections, and avionics support for the general aviation community at
+            quality maintenance, inspections, and airframe &amp; powerplant support for the general aviation community at
             one of Tampa Bay&apos;s most active reliever airports. Based at Tampa Executive Airport (KVDF),
             we serve private owners, commercial operators, and flight schools with the same standard of
             accountability on every aircraft that comes through our hangar.
