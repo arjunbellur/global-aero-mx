@@ -153,7 +153,7 @@ export default function AboutPage() {
                 Global Pilot Academy
               </h3>
               <p style={{ fontSize: "0.96875rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 16px" }}>
-                GAM is the in-house maintenance operation supporting GPA&apos;s 17-aircraft training fleet
+                GAM is the in-house maintenance operation supporting GPA&apos;s 22-aircraft training fleet
                 at KVDF. The same quality and accountability we bring to flight school aircraft is what
                 we bring to yours.
               </p>

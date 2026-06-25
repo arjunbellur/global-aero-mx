@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Do you support flight school aircraft?",
-    a: "Yes. We are the in-house maintenance operation for Global Pilot Academy's 17-aircraft training fleet at KVDF.",
+    a: "Yes. We are the in-house maintenance operation for Global Pilot Academy's 22-aircraft training fleet at KVDF.",
   },
   {
     q: "What is an AD and why does it matter?",
