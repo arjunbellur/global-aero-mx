@@ -3,7 +3,7 @@ import Image from "next/image";
 import QuickRequestForm from "@/components/home/QuickRequestForm";
 
 const trustBadges = [
-  "FAA Certificated",
+  "FAA Certificated Repair Station",
   "On-Airport KVDF",
   "A&P/IA Staff",
   "No Surprise Invoices",
