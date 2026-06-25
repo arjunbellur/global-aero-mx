@@ -130,27 +130,6 @@ export default function AircraftPage() {
         </div>
       </section>
 
-      {/* Also service note */}
-      <section
-        style={{
-          background: "#fff",
-          borderTop: "1px solid var(--gray-200)",
-          borderBottom: "1px solid var(--gray-200)",
-          padding: "24px",
-          textAlign: "center",
-        }}
-      >
-        <p
-          style={{
-            margin: 0,
-            fontSize: "0.9375rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          <strong style={{ color: "var(--text-primary)" }}>Also service:</strong> Experimental · LSA ·
-          Sport class · MOSAIC
-        </p>
-      </section>
 
       {/* CTA */}
       <section className="cta-band">
