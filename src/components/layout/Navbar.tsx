@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -22,17 +23,14 @@ export default function Navbar() {
       <div className="container nav-main">
         {/* Logo */}
         <Link href="/" className="nav-logo">
-          <div style={{
-            width: 40, height: 40,
-            background: "var(--blue-primary)",
-            borderRadius: 10,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontWeight: 900, fontSize: 23, color: "#fff",
-            boxShadow: "0 8px 18px -8px rgba(26,31,140,0.55)",
-            flexShrink: 0,
-          }}>
-            G
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Global Aero Maintenance logo"
+            width={44}
+            height={44}
+            style={{ objectFit: "contain", flexShrink: 0 }}
+            priority
+          />
           <div style={{ lineHeight: 1.04 }}>
             <div className="nav-wordmark">Global Aero Maintenance</div>
             <div className="nav-tagline">Keeping the World Flying</div>
