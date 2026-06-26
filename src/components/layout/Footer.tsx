@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const pages = [
   { href: "/",          label: "Home" },
@@ -19,13 +20,9 @@ export default function Footer() {
           {/* Col 1 — Logo + address + contact */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 16 }}>
-              <div style={{
-                width: 38, height: 38,
-                border: "2px solid rgba(255,255,255,0.5)",
-                borderRadius: 9,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontWeight: 800, fontSize: 21, color: "#fff",
-              }}>G</div>
+              <div style={{ background: "#fff", borderRadius: 8, padding: 3, flexShrink: 0 }}>
+                <Image src="/logo.png" alt="Global Aero Maintenance logo" width={34} height={34} style={{ objectFit: "contain", display: "block" }} />
+              </div>
               <div style={{ fontWeight: 800, fontSize: "1rem", color: "#fff", lineHeight: 1.1 }}>
                 Global Aero<br />Maintenance, Inc.
               </div>

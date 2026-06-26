@@ -2,51 +2,53 @@
 
 import { useState } from "react";
 
+// Replace with your Formspree form ID from formspree.io
+// 1. Sign up at https://formspree.io (free)
+// 2. Create a form → add GAMX@globalaeromx.com as destination
+// 3. Copy the form ID (e.g. "xgvkbypp") and paste below
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "";
+
 const serviceOptions = [
   "Annual / 100-Hr Inspection",
   "Airframe Maintenance",
   "Multi-Engine Service",
   "Engine & Powerplant",
-
   "Additional Services",
   "AOG / Unscheduled",
   "Pre-Buy Inspection",
   "Other",
 ];
 
-interface FormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  aircraft: string;
-  nNumber: string;
-  service: string;
-  description: string;
-}
-
 export default function SchedulePage() {
-  const [form, setForm] = useState<FormData>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    aircraft: "",
-    nNumber: "",
-    service: "",
-    description: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const formEl = e.currentTarget;
+    const fd = new FormData(formEl);
+
+    if (!FORMSPREE_ID) {
+      // Fallback: open mailto if Formspree not configured
+      const subject = encodeURIComponent(`Service Request – ${fd.get("aircraft") ?? "Aircraft"} (${fd.get("nNumber") ?? ""})`);
+      const body = encodeURIComponent(
+        `First Name: ${fd.get("firstName")}\nLast Name: ${fd.get("lastName")}\nEmail: ${fd.get("email")}\nPhone: ${fd.get("phone")}\nAircraft: ${fd.get("aircraft")}\nN-Number: ${fd.get("nNumber")}\nService: ${fd.get("service")}\n\nDescription:\n${fd.get("description")}`
+      );
+      window.location.href = `mailto:GAMX@globalaeromx.com?subject=${subject}&body=${body}`;
+      setStatus("success");
+      return;
+    }
+
+    setStatus("loading");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: fd,
+      });
+      setStatus(res.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -210,7 +212,7 @@ export default function SchedulePage() {
 
             {/* Right — form */}
             <div className="schedule-right">
-              {submitted ? (
+              {status === "success" ? (
                 <div
                   style={{
                     display: "flex",
@@ -248,7 +250,7 @@ export default function SchedulePage() {
                     directly for same-day response.
                   </p>
                   <button
-                    onClick={() => { setSubmitted(false); setForm({ firstName: "", lastName: "", email: "", phone: "", aircraft: "", nNumber: "", service: "", description: "" }); }}
+                    onClick={() => setStatus("idle")}
                     className="btn-ghost"
                   >
                     Submit Another Request
@@ -259,97 +261,42 @@ export default function SchedulePage() {
                   <h2 style={{ fontWeight: 700, fontSize: "1.25rem", color: "var(--text-primary)", margin: "0 0 28px" }}>
                     Work Order Request
                   </h2>
+                  {status === "error" && (
+                    <div style={{ background: "#fff3f3", border: "1px solid #fca5a5", borderRadius: 8, padding: "12px 16px", marginBottom: 20, fontSize: "0.875rem", color: "#b91c1c" }}>
+                      Something went wrong. Please call <a href="tel:+18137534020" style={{ fontWeight: 700, color: "#b91c1c" }}>(813) 753-4020</a> or email <a href="mailto:GAMX@globalaeromx.com" style={{ fontWeight: 700, color: "#b91c1c" }}>GAMX@globalaeromx.com</a> directly.
+                    </div>
+                  )}
                   <form onSubmit={handleSubmit}>
-                    <div
-                      className="form-row"
-                    >
+                    <div className="form-row">
                       <div>
                         <label htmlFor="firstName" className="form-label">First Name *</label>
-                        <input
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          required
-                          value={form.firstName}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="Jane"
-                        />
+                        <input id="firstName" name="firstName" type="text" required className="form-input" placeholder="Jane" />
                       </div>
                       <div>
                         <label htmlFor="lastName" className="form-label">Last Name *</label>
-                        <input
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          required
-                          value={form.lastName}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="Smith"
-                        />
+                        <input id="lastName" name="lastName" type="text" required className="form-input" placeholder="Smith" />
                       </div>
                     </div>
 
-                    <div
-                      className="form-row"
-                    >
+                    <div className="form-row">
                       <div>
                         <label htmlFor="email" className="form-label">Email *</label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={form.email}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="jane@example.com"
-                        />
+                        <input id="email" name="email" type="email" required className="form-input" placeholder="jane@example.com" />
                       </div>
                       <div>
                         <label htmlFor="phone" className="form-label">Phone *</label>
-                        <input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          required
-                          value={form.phone}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="(813) 555-0100"
-                        />
+                        <input id="phone" name="phone" type="tel" required className="form-input" placeholder="(813) 555-0100" />
                       </div>
                     </div>
 
-                    <div
-                      className="form-row"
-                    >
+                    <div className="form-row">
                       <div>
                         <label htmlFor="aircraft" className="form-label">Aircraft Make / Model *</label>
-                        <input
-                          id="aircraft"
-                          name="aircraft"
-                          type="text"
-                          required
-                          value={form.aircraft}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="Cessna 172S"
-                        />
+                        <input id="aircraft" name="aircraft" type="text" required className="form-input" placeholder="Cessna 172S" />
                       </div>
                       <div>
                         <label htmlFor="nNumber" className="form-label">N-Number *</label>
-                        <input
-                          id="nNumber"
-                          name="nNumber"
-                          type="text"
-                          required
-                          value={form.nNumber}
-                          onChange={handleChange}
-                          className="form-input"
-                          placeholder="N12345"
-                        />
+                        <input id="nNumber" name="nNumber" type="text" required className="form-input" placeholder="N12345" />
                       </div>
                     </div>
 
@@ -359,8 +306,7 @@ export default function SchedulePage() {
                         id="service"
                         name="service"
                         required
-                        value={form.service}
-                        onChange={handleChange}
+                        defaultValue=""
                         className="form-input"
                       >
                         <option value="">Select a service…</option>
@@ -376,16 +322,19 @@ export default function SchedulePage() {
                         id="description"
                         name="description"
                         rows={4}
-                        value={form.description}
-                        onChange={handleChange}
                         className="form-input"
                         placeholder="Describe the issue or work needed…"
                         style={{ resize: "vertical", minHeight: "100px" }}
                       />
                     </div>
 
-                    <button type="submit" className="btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-                      Schedule Service →
+                    <button
+                      type="submit"
+                      className="btn-primary"
+                      style={{ width: "100%", justifyContent: "center", opacity: status === "loading" ? 0.7 : 1 }}
+                      disabled={status === "loading"}
+                    >
+                      {status === "loading" ? "Sending…" : "Schedule Service →"}
                     </button>
 
                     <p
