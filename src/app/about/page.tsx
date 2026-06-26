@@ -30,7 +30,7 @@ const whyChoose = [
   "On-Airport Location",
   "Flight School Support",
   "Owner-Input in Maintenance",
-  "Liveaboard Support",
+  "Aircraft on Ground (AOG) Teams",
   "No Surprise Invoices",
 ];
 

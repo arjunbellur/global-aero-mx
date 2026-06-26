@@ -20,8 +20,8 @@ const faqs = [
     a: "Yes. We support owner-input in maintenance under FAA regulations. You can participate in preventive maintenance tasks while our A&P provides oversight and signs off the work.",
   },
   {
-    q: "Do you support liveaboards at KVDF?",
-    a: "Yes. We regularly service aircraft for pilots based full-time at Tampa Executive and understand the unique needs of liveaboard operations.",
+    q: "Do you have Aircraft on Ground (AOG) support?",
+    a: "Yes. We provide AOG response for aircraft that are grounded and need immediate attention. Call +1 (813) 753-4020 directly for same-day AOG callbacks.",
   },
   {
     q: "What is a squawk?",
