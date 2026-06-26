@@ -51,7 +51,7 @@ const whyChoose = [
   "Quick Turnaround",
   "On-Airport Location",
   "Flight School Support",
-  "Owner-Assisted Work",
+  "Owner-Input in Maintenance",
   "Liveaboard Support",
   "No Surprise Invoices",
 ];

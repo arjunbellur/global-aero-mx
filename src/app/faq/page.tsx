@@ -16,8 +16,8 @@ const faqs = [
     a: "Yes. We specialize in twin-engine piston including Piper Seneca, Beechcraft Baron, Piper Seminole, Cessna 310, and more.",
   },
   {
-    q: "Can I assist with my own maintenance (owner-assisted)?",
-    a: "Yes. We support owner-assisted maintenance under FAA regulations. You can participate in preventive maintenance tasks while our A&P provides oversight and signs off the work.",
+    q: "Can I provide input on my own maintenance?",
+    a: "Yes. We support owner-input in maintenance under FAA regulations. You can participate in preventive maintenance tasks while our A&P provides oversight and signs off the work.",
   },
   {
     q: "Do you support liveaboards at KVDF?",
