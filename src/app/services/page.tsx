@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceSections = [
   {
     title: "Annual & 100-Hour Inspections",
     short: "Inspections",
+    photo: "/images/crew/IMG_3069.JPG",
+    photoAlt: "Active maintenance in GAM hangar",
     bullets: [
       "FAA-approved annual inspections",
       "100-hour inspections (commercial operators)",
@@ -19,6 +22,8 @@ const serviceSections = [
   {
     title: "Airframe Maintenance & Repair",
     short: "Airframe",
+    photo: "/images/crew/IMG_0082.JPG",
+    photoAlt: "Aircraft in GAM hangar",
     bullets: [
       "Sheet metal repair & fabrication",
       "Flight control rigging & adjustment",
@@ -31,6 +36,8 @@ const serviceSections = [
   {
     title: "Multi-Engine Specialization",
     short: "Multi-Engine",
+    photo: "/images/crew/IMG_1040.JPG",
+    photoAlt: "Twin-engine aircraft at KVDF",
     bullets: [
       "Twin engine differential rigging",
       "Propeller synchronization checks",
@@ -42,6 +49,8 @@ const serviceSections = [
   {
     title: "Engine & Powerplant Services",
     short: "Powerplant",
+    photo: "/images/crew/IMG_1991.JPG",
+    photoAlt: "Aircraft engine with cowl open",
     bullets: [
       "Top overhaul & cylinder replacements",
       "Engine troubleshooting & repair",
@@ -54,6 +63,8 @@ const serviceSections = [
   {
     title: "Additional Services",
     short: "Additional",
+    photo: "/images/crew/IMG_0192.jpg",
+    photoAlt: "Global Aero Maintenance hangar exterior",
     bullets: [
       "Propeller removal, balance & overhaul",
       "Pitot-static & altimeter certification",
@@ -114,10 +125,15 @@ export default function ServicesPage() {
             </ul>
             <Link href="/schedule" className="btn-primary">Schedule This Service →</Link>
           </div>
-          <div className="svc-photo" style={{ alignSelf: "stretch" }}>
-            <span style={{ fontFamily: "var(--font-mono), monospace", fontSize: "0.75rem", color: "#9298b4", padding: "0 14px", textAlign: "center" }}>
-              [ {active.short} service photo ]
-            </span>
+          <div className="svc-photo img-wrap" style={{ alignSelf: "stretch", minHeight: 260 }}>
+            <Image
+              key={active.short}
+              src={active.photo}
+              alt={active.photoAlt}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: "cover", borderRadius: 14 }}
+            />
           </div>
         </div>
       </div>

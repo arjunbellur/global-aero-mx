@@ -14,22 +14,32 @@ const services = [
   {
     title: "Annual & 100-Hour Inspections",
     desc: "FAA annuals, 100-hour checks, AD compliance, and pre-purchase inspections.",
+    photo: "/images/crew/IMG_3069.JPG",
+    photoAlt: "Active maintenance in GAM hangar",
   },
   {
     title: "Airframe Maintenance & Repair",
     desc: "Sheet metal, control rigging, landing gear, brakes, and corrosion control.",
+    photo: "/images/crew/IMG_0082.JPG",
+    photoAlt: "Aircraft in GAM hangar",
   },
   {
     title: "Multi-Engine Specialization",
     desc: "Twin differential rigging, prop sync, and twin-specific AD compliance.",
+    photo: "/images/crew/IMG_1040.JPG",
+    photoAlt: "Twin-engine aircraft at KVDF",
   },
   {
     title: "Engine & Powerplant",
     desc: "Top overhauls, cylinder work, magnetos, carburetor and fuel injection service.",
+    photo: "/images/crew/IMG_1991.JPG",
+    photoAlt: "Aircraft engine with cowl open",
   },
   {
     title: "Additional Services",
     desc: "Prop balance, pitot-static cert, oil analysis, and weight & balance.",
+    photo: "/images/crew/IMG_0180.jpg",
+    photoAlt: "Aircraft and equipment in GAM hangar",
   },
 ];
 
@@ -108,12 +118,12 @@ export default function HomePage() {
       <div className="container" style={{ padding: "clamp(44px,7vw,64px) clamp(20px,4vw,28px) 0" }}>
         <div className="img-wrap" style={{ height: "clamp(220px,42vw,380px)" }} data-animate>
           <Image
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=80"
-            alt="Aircraft at Tampa Executive Airport"
+            src="/images/crew/IMG_2890.JPG"
+            alt="Global Aero Maintenance hangar at KVDF Tampa Executive Airport"
             fill
             priority
             sizes="(max-width: 768px) 100vw, 1180px"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: "center 30%" }}
           />
         </div>
         <p style={{
@@ -169,7 +179,9 @@ export default function HomePage() {
             {services.map((s) => (
               <Link key={s.title} href="/services" className="service-card-link">
                 <div className="card service-card">
-                  <div className="service-card-photo" />
+                  <div className="service-card-photo" style={{ position: "relative" }}>
+                    <Image src={s.photo} alt={s.photoAlt} fill sizes="(max-width: 768px) 100vw, 25vw" style={{ objectFit: "cover" }} />
+                  </div>
                   <div className="service-card-body">
                     <div className="service-card-header">
                       <div className="icon-tile">
@@ -229,11 +241,11 @@ export default function HomePage() {
             </div>
             <div className="img-wrap" style={{ height: 260 }}>
               <Image
-                src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=900&q=80"
-                alt="Piston aircraft on runway"
+                src="/images/crew/IMG_0448.jpg"
+                alt="Piper Archer aircraft at golden hour"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", objectPosition: "center 60%" }}
               />
             </div>
           </div>

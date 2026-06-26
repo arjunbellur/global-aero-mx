@@ -6,22 +6,22 @@ const articles = [
     title: "What to Expect During Your Annual Inspection",
     teaser:
       "A walk-through of the annual process, timelines, what we look for, and how to prepare your aircraft to minimize downtime.",
-    photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft at airport",
+    photo: "/images/crew/IMG_3069.JPG",
+    photoAlt: "Active maintenance in GAM hangar",
   },
   {
     title: "Engine Health: Reading Your Oil Analysis Report",
     teaser:
       "What the numbers mean, which metals to watch, and when a trend should prompt a call to your A&P — explained for piston aircraft owners.",
-    photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft engine inspection",
+    photo: "/images/crew/IMG_1991.JPG",
+    photoAlt: "Aircraft engine with cowl open",
   },
   {
     title: "Pre-Buy Inspection Checklist for Piston Aircraft Buyers",
     teaser:
       "The key airframe, engine, and systems items we evaluate before you commit to a purchase — and why an independent inspection matters.",
-    photo: "https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Piston aircraft for pre-buy inspection",
+    photo: "/images/crew/IMG_3070.JPG",
+    photoAlt: "GAM mechanic inspecting aircraft",
   },
 ];
 

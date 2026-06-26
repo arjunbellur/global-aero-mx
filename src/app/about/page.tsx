@@ -4,20 +4,20 @@ const pillars = [
   {
     title: "Expert & Experienced",
     desc: "A&P/IA technicians who know piston aircraft inside and out — from annuals to complex engine work.",
-    photo: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft at airport",
+    photo: "/images/crew/IMG_3070.JPG",
+    photoAlt: "GAM mechanic inspecting aircraft on ramp",
   },
   {
     title: "Support with Technology",
     desc: "Modern diagnostic tools and testing equipment — accurate, efficient troubleshooting with full documentation.",
-    photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft cockpit instruments",
+    photo: "/images/crew/IMG_3069.JPG",
+    photoAlt: "Active maintenance work in GAM hangar",
   },
   {
     title: "Transparent Service",
     desc: "Detailed logbooks and no-surprise invoices on every job. You see exactly what was done and why.",
-    photo: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
-    photoAlt: "Aircraft cockpit instruments",
+    photo: "/images/crew/IMG_0923.jpg",
+    photoAlt: "Aircraft in GAM hangar",
   },
 ];
 
@@ -141,8 +141,8 @@ export default function AboutPage() {
             <div style={{ background: "var(--gray-50)", border: "1px solid var(--gray-200)", borderRadius: 16, padding: 28 }}>
               <div className="img-wrap" style={{ height: 160, marginBottom: 20 }}>
                 <Image
-                  src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=900&q=80"
-                  alt="Training fleet aircraft"
+                  src="/images/crew/IMG_0192.jpg"
+                  alt="Global Aero Maintenance hangar and aircraft at KVDF"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: "cover" }}
